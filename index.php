@@ -46,7 +46,7 @@ require_once 'config/try_populate.php';
                 <div class="card-body d-flex flex-column">
                     <span class="text-secondary small text-uppercase fw-semibold mb-2">Aménageurs</span>
                     <span id="nb-amenageurs" class="fs-1 fw-bold lh-1 mb-1">...</span>
-                    <span class="text-secondary small mt-auto">opérateurs distincts</span>
+                    <span class="text-secondary small mt-auto">aménageurs distincts</span>
                 </div>
             </div>
         </div>
