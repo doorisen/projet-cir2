@@ -1,0 +1,19 @@
+:root {
+    --app-bg: #0b0f19;
+    --header-bg: #155e9b;
+    --card-bg: #1e2532;
+    --footer-bg: #111827;
+
+    --chart-bar: #a5b4fc;
+    --chart-bar-active: #375bb5;
+}
+
+body.admin-mode {
+    --app-bg: #121212;
+    --header-bg: #252525;
+    --card-bg: #303030;
+    --footer-bg: #303030;
+
+    --chart-bar: #c4b5fd;
+    --chart-bar-active: #7c3aed;
+}

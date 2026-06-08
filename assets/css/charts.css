@@ -1,0 +1,38 @@
+.mock-chart {
+    height: 140px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.chart-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.chart-label {
+    font-size: .8rem;
+    margin-top: 4px;
+    color: #adb5bd;
+}
+
+.chart-bar {
+    width: 100%;
+    max-width: 40px;
+    background-color: var(--chart-bar);
+    opacity: .75;
+    transition:
+        background-color .3s,
+        opacity .3s;
+}
+
+.chart-bar:hover {
+    opacity: 1;
+}
+
+.chart-bar-active {
+    background-color: var(--chart-bar-active) !important;
+    opacity: 1;
+}

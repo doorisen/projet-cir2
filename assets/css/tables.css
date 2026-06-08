@@ -1,0 +1,27 @@
+.table-custom {
+    --bs-table-bg: transparent;
+    --bs-table-color: #f8f9fa;
+    --bs-table-border-color: rgba(255,255,255,.1);
+    --bs-table-hover-bg: rgba(255,255,255,.05);
+    --bs-table-hover-color: #fff;
+
+    margin-bottom: 0;
+}
+
+.table-custom th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .85rem;
+    color: var(--chart-bar);
+    border-bottom: 2px solid rgba(255,255,255,.2);
+}
+
+.table-custom td {
+    vertical-align: middle;
+    font-size: .95rem;
+}
+
+.table td {
+    white-space: nowrap;
+}
+

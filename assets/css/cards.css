@@ -1,0 +1,12 @@
+.custom-card {
+    background-color: var(--card-bg) !important;
+}
+
+.badge-custom {
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #e2e8f0;
+    font-weight: 500;
+    padding: .5em 1em;
+    border-radius: 50px;
+}
