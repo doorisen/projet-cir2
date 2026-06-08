@@ -96,7 +96,6 @@ async function loadDetails() {
 
 
 function renderAdminBadges(containerId, dataArray, selectId) {
-    console.log(dataArray);
     const container = document.getElementById(containerId);
     const select = document.getElementById(selectId);
     container.innerHTML = '';
@@ -192,8 +191,6 @@ function initAdminActions(pdcId) {
         if (!isCreation) {
             payload.id = parseInt(pdcId);
         }
-        console.log(payload);
-        //exit(); //crash pour ne pas recharger la page
 
         try {
             const url = isCreation ? `api/pdc.php` : `api/pdc.php?id=${pdcId}`;

@@ -40,13 +40,11 @@ async function loadResults() {
     const station       = document.getElementById('station').value;
     const params        = new URLSearchParams({amenageur, prise, departement, station});
 
-    console.log(`${params}`);
     const response = await fetch(`api/pdcs.php?${params}`);
     if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
     }
     const data = await response.json();
-    console.log(data);
 
     const tbody = document.getElementById('results-body');
     tbody.innerHTML = '';
