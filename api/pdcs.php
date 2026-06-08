@@ -3,8 +3,8 @@
 declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 
-require_once __DIR__ . '/../config/db.php';
-require_once __DIR__ . '/../helpers/classes/PdcManager.php';
+require_once '../config/db.php';
+require_once '../helpers/classes/PdcManager.php';
 
 
 try {

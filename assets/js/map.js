@@ -44,7 +44,7 @@ async function loadStations() {
 
     try {
         const response = await fetch(
-            `../api/stations.php?${params.toString()}`
+            `api/stations.php?${params.toString()}`
         );
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);

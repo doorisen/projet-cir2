@@ -7,16 +7,16 @@ header('Content-Type: application/json; charset=utf-8');
 set_time_limit(30); 
 ini_set('memory_limit', '512M');
 
-require_once __DIR__ . '/db.php';
-require_once __DIR__ . '/../helpers/classes/CommuneManager.php';
-require_once __DIR__ . '/../helpers/classes/EntrepriseManager.php';
-require_once __DIR__ . '/../helpers/classes/ContactManager.php';
-require_once __DIR__ . '/../helpers/classes/ImplantationManager.php';
-require_once __DIR__ . '/../helpers/classes/ConditionAccesManager.php';
-require_once __DIR__ . '/../helpers/classes/RaccordementManager.php';
-require_once __DIR__ . '/../helpers/classes/EnseigneManager.php';
-require_once __DIR__ . '/../helpers/classes/StationManager.php';
-require_once __DIR__ . '/../helpers/classes/PdcManager.php';
+require_once 'db.php';
+require_once '../helpers/classes/CommuneManager.php';
+require_once '../helpers/classes/EntrepriseManager.php';
+require_once '../helpers/classes/ContactManager.php';
+require_once '../helpers/classes/ImplantationManager.php';
+require_once '../helpers/classes/ConditionAccesManager.php';
+require_once '../helpers/classes/RaccordementManager.php';
+require_once '../helpers/classes/EnseigneManager.php';
+require_once '../helpers/classes/StationManager.php';
+require_once '../helpers/classes/PdcManager.php';
 
 
 

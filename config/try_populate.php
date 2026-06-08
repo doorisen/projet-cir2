@@ -14,7 +14,7 @@ $nbStations = (int) $stmt->fetchColumn();
 if ($nbStations === 0) {
     $currentPage = urlencode($_SERVER['REQUEST_URI']);
 
-    header("Location: /config/loader.php?return={$currentPage}");
+    header("Location: config/loader.php?return={$currentPage}");
     exit;
 }
 
