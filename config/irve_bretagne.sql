@@ -2,6 +2,10 @@
 -- Script MYSQL pour mcd 
 -- ----------------------------------------------------------
 
+DROP DATABASE IF EXISTS irve_bretagne;
+CREATE DATABASE irve_bretagne;
+USE irve_bretagne;
+
 SET FOREIGN_KEY_CHECKS = 0;
 
 DROP TABLE IF EXISTS COMMERCIALISER;
