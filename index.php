@@ -67,10 +67,18 @@ require_once 'config/try_populate.php';
         <div id="year-chart" class="mock-chart d-flex align-items-end gap-2 pb-2"></div>
     </section>
 
-    <!-- Stats - Pdc par département -->
-    <section class="mt-2">
-        <h5 class="text-white fw-semibold mb-3">Points installés par département</h5>
-        <div id="dep-chart" class="mock-chart d-flex align-items-end gap-2 pb-2"></div>
+    <section class="row g-4 mt-2">
+        <!-- Stats - Pdc par département -->
+        <div class="col-md-6 chart-separator">
+            <h5 class="text-white fw-semibold mb-3">Points installés par département</h5>
+            <div id="dep-chart" class="mock-chart d-flex align-items-end gap-2 pb-2"></div>
+        </div>
+
+        <!-- Stats - Pdc par type de prise -->
+        <div class="col-md-6">
+            <h5 class="text-white fw-semibold mb-3">Points installés par type de prise</h5>
+            <div id="plug-chart" class="mock-chart d-flex align-items-end gap-2 pb-2"></div>
+        </div>
     </section>
 
     <!-- Stats - Pdc par année et département -->

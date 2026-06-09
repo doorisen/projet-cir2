@@ -12,12 +12,13 @@ try {
     $statsManager = new StatsManager($pdo);
     $filterManager = new FilterManager($pdo);
     echo json_encode([
-        'success' => true,
-        'stats' => $statsManager->getGlobalStats(),
-        'years' => $statsManager->getPdcByYear(),
-        'departements' => $filterManager->getDepartements(),
-        'pdc_by_dep'      => $statsManager->getPdcByDepartment(),
-        'pdc_by_year_dep' => $statsManager->getPdcByYearAndDepartment()
+        'success'           => true,
+        'stats'             => $statsManager->getGlobalStats(),
+        'years'             => $statsManager->getPdcByYear(),
+        'departements'      => $filterManager->getDepartements(),
+        'pdc_by_dep'        => $statsManager->getPdcByDepartment(),
+        'pdc_by_plug'       => $statsManager->getPdcByPlugType(),
+        'pdc_by_year_dep'   => $statsManager->getPdcByYearAndDepartment()
     ]);
 
 } catch (Throwable $e) {

@@ -68,3 +68,15 @@
 .dep-29 {background-color: var(--dep-29);}
 .dep-35 {background-color: var(--dep-35);}
 .dep-56 {background-color: var(--dep-56);}
+
+@media (min-width: 768px) {
+    .chart-separator {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}
+
+.plug-ef        {background-color: var(--plug-ef);}
+.plug-type-2    {background-color: var(--plug-t2);}
+.plug-combo-ccs {background-color: var(--plug-ccs);}
+.plug-chademo   {background-color: var(--plug-chademo);}
+.plug-autre     {background-color: var(--plug-autre);}

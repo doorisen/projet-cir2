@@ -58,6 +58,21 @@ class StatsManager {
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getPdcByPlugType() : array {
+        $sql = "
+            SELECT 'EF' AS type_prise, SUM(prise_type_ef) AS nb_pdc FROM POINT_DE_RECHARGE
+            UNION ALL
+            SELECT 'Type 2' AS type_prise, SUM(prise_type_2) AS nb_pdc FROM POINT_DE_RECHARGE
+            UNION ALL
+            SELECT 'Combo CCS' AS type_prise, SUM(prise_type_combo_ccs) AS nb_pdc FROM POINT_DE_RECHARGE
+            UNION ALL
+            SELECT 'Chademo' AS type_prise, SUM(prise_type_chademo) AS nb_pdc FROM POINT_DE_RECHARGE
+            UNION ALL
+            SELECT 'Autre' AS type_prise, SUM(prise_type_autre) AS nb_pdc FROM POINT_DE_RECHARGE
+        ";
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getPdcByYearAndDepartment() : array {
         $sql = "
             SELECT 

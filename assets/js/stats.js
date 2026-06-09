@@ -14,6 +14,7 @@ async function loadStats() {
         displayCards(data);
         displayChart(data.years);
         displayDepChart(data.pdc_by_dep);
+        displayPlugChart(data.pdc_by_plug);
         displayYearDepChart(data.pdc_by_year_dep);
 
     } catch (error) {
@@ -81,6 +82,36 @@ function displayDepChart(pdcByDep) {
         const label = document.createElement('div');
         label.className = 'chart-label';
         label.textContent = `Dép. ${item.dep_code}`;
+
+        wrapper.appendChild(bar);
+        wrapper.appendChild(label);
+        chart.appendChild(wrapper);
+    });
+}
+
+
+function displayPlugChart(pdcByPlug) {
+    const chart = document.getElementById('plug-chart');
+    if (!chart || !pdcByPlug || pdcByPlug.length === 0) return;
+    chart.innerHTML = '';
+
+    const max = Math.max(...pdcByPlug.map(p => Number(p.nb_pdc)));
+
+    pdcByPlug.forEach(item => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'chart-wrapper';
+
+        const bar = document.createElement('div');
+        const height = (Number(item.nb_pdc) / max) * 100;
+        const plugName = item.type_prise.toLowerCase().replace(/[^a-z0-9]/g, '-');
+
+        bar.className = `chart-bar rounded-top-1 plug-${plugName}`;
+        bar.style.height = `${height}%`;
+        bar.title = `${item.type_prise} : ${Number(item.nb_pdc).toLocaleString('fr-FR')} points`;
+
+        const label = document.createElement('div');
+        label.className = 'chart-label';
+        label.textContent = item.type_prise; 
 
         wrapper.appendChild(bar);
         wrapper.appendChild(label);
