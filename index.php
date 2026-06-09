@@ -67,6 +67,28 @@ require_once 'config/try_populate.php';
         <div id="year-chart" class="mock-chart d-flex align-items-end gap-2 pb-2"></div>
     </section>
 
+    <!-- Stats - Pdc par département -->
+    <section class="mt-2">
+        <h5 class="text-white fw-semibold mb-3">Points installés par département</h5>
+        <div id="dep-chart" class="mock-chart d-flex align-items-end gap-2 pb-2"></div>
+    </section>
+
+    <!-- Stats - Pdc par année et département -->
+    <section class="mt-4">
+        <h5 class="text-white fw-semibold mb-3">Points installés par année et par département</h5>
+        
+        <div class="d-flex gap-3 mb-3 flex-wrap bg-dark bg-opacity-25 p-2 rounded border border-secondary border-opacity-10">
+            <div class="d-flex align-items-center gap-2"><span class="rounded-circle chart-dot-legend dep-22"></span> <span class="small text-secondary">22 Côtes-d'Armor</span></div>
+            <div class="d-flex align-items-center gap-2"><span class="rounded-circle chart-dot-legend dep-29"></span> <span class="small text-secondary">29 Finistère</span></div>
+            <div class="d-flex align-items-center gap-2"><span class="rounded-circle chart-dot-legend dep-35"></span> <span class="small text-secondary">35 Ille-et-Vilaine</span></div>
+            <div class="d-flex align-items-center gap-2"><span class="rounded-circle chart-dot-legend dep-56"></span> <span class="small text-secondary">56 Morbihan</span></div>
+        </div>
+
+        <div class="w-100" style="overflow-x: auto;">
+            <div id="year-dep-chart" class="mock-chart d-flex align-items-end gap-4 pb-2" style="min-width: 600px;"></div>
+        </div>
+    </section>
+
     <!-- Boutons -->
     <section class="d-flex gap-3 mt-3">
         <button class="btn btn-outline-secondary custom-action-btn text-white d-flex align-items-center gap-2 rounded-pill px-4 py-2">

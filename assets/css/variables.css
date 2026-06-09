@@ -6,6 +6,11 @@
 
     --chart-bar: #a5b4fc;
     --chart-bar-active: #375bb5;
+
+    --dep-22: #ff6384;
+    --dep-29: #36a2eb;
+    --dep-35: #ffce56;
+    --dep-56: #4bc0c0;
 }
 
 body.admin-mode {
@@ -16,4 +21,9 @@ body.admin-mode {
 
     --chart-bar: #c4b5fd;
     --chart-bar-active: #7c3aed;
+
+    --dep-22: #f472b6; 
+    --dep-29: #60a5fa;
+    --dep-35: #fbbf24;
+    --dep-56: #2dd4bf;
 }

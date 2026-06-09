@@ -36,3 +36,35 @@
     background-color: var(--chart-bar-active) !important;
     opacity: 1;
 }
+
+.chart-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 100%;
+    width: 100%;
+    max-width: 65px;
+    justify-content: center;
+}
+
+.chart-bar-sm {
+    flex: 1;
+    min-width: 8px;
+    opacity: .75;
+    transition: opacity .3s;
+}
+
+.chart-bar-sm:hover {
+    opacity: 1;
+}
+
+.chart-dot-legend {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+
+.dep-22 {background-color: var(--dep-22);}
+.dep-29 {background-color: var(--dep-29);}
+.dep-35 {background-color: var(--dep-35);}
+.dep-56 {background-color: var(--dep-56);}

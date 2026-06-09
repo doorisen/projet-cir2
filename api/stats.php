@@ -15,7 +15,9 @@ try {
         'success' => true,
         'stats' => $statsManager->getGlobalStats(),
         'years' => $statsManager->getPdcByYear(),
-        'departements' => $filterManager->getDepartements()
+        'departements' => $filterManager->getDepartements(),
+        'pdc_by_dep'      => $statsManager->getPdcByDepartment(),
+        'pdc_by_year_dep' => $statsManager->getPdcByYearAndDepartment()
     ]);
 
 } catch (Throwable $e) {

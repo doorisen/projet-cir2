@@ -10,6 +10,6 @@
             <a href="helpers/cookie.php?action=login" class="btn btn-sm btn-outline-secondary text-secondary custom-admin-btn">Mode admin</a>
         <?php endif; ?>
     </div>
-    <div>CIR2</div>
+    <div>Valentin TANG-PATUREL - CIR2</div>
 </footer>
 

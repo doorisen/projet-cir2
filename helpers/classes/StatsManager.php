@@ -44,7 +44,37 @@ class StatsManager {
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    
+    public function getPdcByDepartment() : array {
+        $sql = "
+            SELECT 
+                c.dep_code, 
+                COUNT(p.id) AS nb_pdc
+            FROM POINT_DE_RECHARGE p
+            JOIN STATION s ON p.id_station = s.id_station
+            JOIN COMMUNE c ON s.code_insee = c.code_insee
+            GROUP BY c.dep_code
+            ORDER BY c.dep_code
+        ";
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getPdcByYearAndDepartment() : array {
+        $sql = "
+            SELECT 
+                YEAR(s.date_mise_en_service) AS annee, 
+                c.dep_code, 
+                COUNT(p.id) AS nb_pdc
+            FROM POINT_DE_RECHARGE p
+            JOIN STATION s ON p.id_station = s.id_station
+            JOIN COMMUNE c ON s.code_insee = c.code_insee
+            WHERE s.date_mise_en_service IS NOT NULL
+            GROUP BY YEAR(s.date_mise_en_service), c.dep_code
+            ORDER BY annee DESC, c.dep_code ASC
+        ";
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
 }
 
 ?>
