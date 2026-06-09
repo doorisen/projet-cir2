@@ -53,7 +53,7 @@ require_once 'config/try_populate.php';
             <div class="col-md-3">
                 <label class="form-label text-secondary small text-uppercase fw-semibold">Station</label>
                 <select id="station" class="form-select bg-dark text-light border-secondary border-opacity-25">
-                    <option value="">Tous</option>
+                    <option value="">Toutes</option>
                 </select>
             </div>
             <!-- Boutons -->
